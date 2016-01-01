@@ -45,7 +45,6 @@ class Users extends CI_Controller {
 	}
 }
 
-		
 	// }
 
 	// public function create_trip()
@@ -74,13 +73,4 @@ class Users extends CI_Controller {
 	// 		$this->session->set_flashdata("error", "Something in your form didn't go so well, try again");
 	// 		redirect('/add_trip');
 	// 	}
-
-		
 	// }
-
-
-
-
-
-
-}
