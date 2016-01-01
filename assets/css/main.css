@@ -1,0 +1,26 @@
+#formdata{
+	width:20%;
+	margin:0 auto;
+}
+
+#info{
+	width:70%;
+	margin:0 auto;
+	margin-top: 30px;
+}
+
+label{
+	display:block;
+}
+
+table{
+	margin: 0 auto;
+	text-align: center;
+	border:1px solid gray;
+}
+
+td, th{
+	width:250px;
+	height: 50px;
+	border-right:1px solid gray;
+}
