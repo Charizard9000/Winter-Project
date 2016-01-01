@@ -35,7 +35,7 @@ class Sessions extends CI_Controller {
 			redirect(base_url("sessions/new"));
 		}
 	}
-	
+
 	public function success()
 	{
 		if ($this->session->userdata('is_logged_in') == FALSE)
