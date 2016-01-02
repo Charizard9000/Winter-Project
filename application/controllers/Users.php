@@ -1,13 +1,11 @@
-
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Users extends CI_Controller {
 
 	public function index()	
 	{
-		$this->load->view("Users/main");
+		$this->load->view("Users/welcome");
 	} 
-
 	//method for showing register form
 	public function new_user()
 	{
@@ -44,33 +42,3 @@ class Users extends CI_Controller {
 		}
 	}
 }
-
-	// }
-
-	// public function create_trip()
-	// {
-	// 	// load model
-	// 	$this->load->model("User");
-
-	// 	// check user input
-	// 	$this->load->library('form_validation');
-
-	// 	// delegate the model the task of validating user input
-	// 	$validation_result = $this->User->validate_trip($this->input->post());
-
-	// 	if( $validation_result == TRUE)
-	// 	{
-	// 		// delegate the task of creating the user to the model
-	// 		$this->User->create_trip($this->input->post());
-
-	// 		// return to the user's home page
-	// 		redirect("/success");
-	// 		// var_dump($this->input->post());
-	// 	}
-
-	// 	else
-	// 	{
-	// 		$this->session->set_flashdata("error", "Something in your form didn't go so well, try again");
-	// 		redirect('/add_trip');
-	// 	}
-	// }
