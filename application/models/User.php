@@ -4,19 +4,19 @@ class User extends CI_Model{
 
 	public function create($post)
 	{
-		$query = "INSERT INTO users (first_name, last_name, email, password, created_at, updated_at) VALUES (?,?,?,?, NOW(),NOW())";
+		$query = "INSERT INTO users (first_name, last_name, email, password, password_confirmation, created_at, updated_at) VALUES (?,?,?,?, NOW(),NOW())";
 		$values = array(
-				$post['name'],
-				$post['username'],
+				$post['first_name'],
+				$post['last_name'],
 				$post['email'],
 				password_hash($post['password'], PASSWORD_BCRYPT)
 			);
 		return $this->db->query($query, $values);
 	}
 
-	public function get_user_by_username($username)
+	public function get_user_by_email($email)
 	{
-		$query = "SELECT * FROM users WHERE username = ?";
+		$query = "SELECT * FROM users WHERE email = ?";
 		$value = array($username);
 		return $this->db->query($query, $value)->row_array();
 	}
