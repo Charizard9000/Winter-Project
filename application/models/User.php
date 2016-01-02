@@ -4,7 +4,7 @@ class User extends CI_Model{
 
 	public function create($post)
 	{
-		$query = "INSERT INTO users (first_name, last_name, email, password, password_confirmation, created_at, updated_at) VALUES (?,?,?,?, NOW(),NOW())";
+		$query = "INSERT INTO users (first_name, last_name, email, password, created_at, updated_at) VALUES (?,?,?,?, NOW(),NOW())";
 		$values = array(
 				$post['first_name'],
 				$post['last_name'],
