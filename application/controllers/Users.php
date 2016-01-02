@@ -1,16 +1,13 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Users extends CI_Controller {
+class Users extends CI_Controller 
+{
 
-	public function index()	
-	{
-		$this->load->view("Users/welcome");
-	} 
-	//method for showing register form
 	public function new_user()
 	{
 		$this->load->view("Users/new_user");
 	}
+
 	//method for actually creating the user
 	public function create()
 	{
@@ -29,16 +26,25 @@ class Users extends CI_Controller {
 			// //delegate the task of creating user to the model
 			$this->User->create($this->input->post());
 
+			$this->session->set_flashdata("error1", "User Registered Successfully");
+			redirect("/home");
+
 			//go to the login page
 			redirect(base_url("sessions/new"));
 		}
+
 		else
 		{
-			//or show error
-			$this->session->set_flashdata("errors", validation_errors());
-
-			//go back to register form
-			redirect(base_url("users/new"));
+			$this->session->set_flashdata("error1", "Something in your form didn't go so well, try again");
+			redirect('/users/new');
 		}
 	}
+
+	public function add_restaurant()
+	{
+		$this->load->model('User');
+		$this->User->add_restaurant($this->input->post());
+		redirect("Session/success");
+	}
+
 }

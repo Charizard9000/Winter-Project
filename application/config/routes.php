@@ -1,24 +1,20 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-$route['default_controller'] = "Users";
+$route['default_controller'] = "Home";
 
-// 1. Route to render the register form
+$route['home'] = "Home";
+
 $route['users/new'] = "Users/new_user";
 
-// 2. Route to render the log in form
-$route['sessions/new'] = "Sessions/new_session";
-
-// 3. Route to do the actual registration
 $route['users/create'] = "Users/create";
 
-// 4. Route to do the actual log in
-$route['sessions/create'] = "Sessions/create";
+$route['users/add'] = "Users/add_restaurant";
 
-// 5. Route to log out
-$route['sessions/destroy'] = "Sessions/destroy";
+$route['Session/login'] = "Sessions/login";
 
-//6. Route to success
-$route['success'] = "Sessions/success";
+$route['Session/admin'] = "Sessions/admin";
+
+$route['Session/success'] = "Sessions/success";
 
 $route['404_override'] = '';
 

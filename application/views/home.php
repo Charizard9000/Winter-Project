@@ -15,8 +15,9 @@
 	?> 
 	<div id="content">
 	<h1 id="title"> Welcome To IssyFoods! </h1> 
+	<a href="/users/new">Register</a>
+	<a href="/Session/login">Login</a>
 
-<img src="" alt="">
 	<?php
 
 	var_dump($query_result);
@@ -40,26 +41,9 @@
 				echo "</div>";
 			}
 		}
-		
 	}
 	
-	// foreach (restaurant in db)
-	{
-		//if (current time > open && current time <= close){}
-			//echo "<div class='restaurant'>"
-		
-			//echo #picture
-			//echo #restaurant name
-			//echo #open
-			//echo #close
-			//echo #deliver
-			//echo "</div>"
-	}
-
-
-
 	?>
 	</div>
 	</body>
-	
 </html>
