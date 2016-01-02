@@ -11,7 +11,7 @@ class Home extends CI_Controller
 		$timestamp = time();
 		$current_date =  date("w", $timestamp);
 		$this->load->model("Restaurant");
-		$stuff = $this->Restaurants->get_stuff($current_date);
+		$stuff = $this->Restaurant->get_stuff($current_date);
 		$this->load->view('Home', ['query_result' => $stuff]);
 	}
 }
