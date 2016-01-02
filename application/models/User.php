@@ -17,7 +17,7 @@ class User extends CI_Model{
 	public function get_user_by_email($email)
 	{
 		$query = "SELECT * FROM users WHERE email = ?";
-		$value = array($username);
+		$value = array($email);
 		return $this->db->query($query, $value)->row_array();
 	}
 
@@ -26,8 +26,8 @@ class User extends CI_Model{
 		$this->form_validation->set_rules("first_name", "first name", "required|min_length[3]");
 		$this->form_validation->set_rules("last_name", "last name", "required");
 		$this->form_validation->set_rules("email", "email", "required|valid_email|is_unique[users.email]");
-		$this->form_validation->set_rules("password", "Password", "required|matches[password_confirmation]|alpha_numeric");
 		$this->form_validation->set_rules("password_confirmation", "Password Confirmation", "required");
+		$this->form_validation->set_rules("password", "Password", "required|matches[password_confirmation]|alpha_numeric");
 
 		return $this->form_validation->run();
 	}
