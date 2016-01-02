@@ -1,83 +1,52 @@
 
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Home extends CI_Controller {
+class Users extends CI_Controller {
 
 
-	public function index()
+
+	public function new_user()
 	{
-		$this->load->view('Home');
+		$this->load->view("Users/new_user");
 	}
 
-	// public function add_trip()
-	// {
-	// 	$this->load->view('Users/add_trip');
-	// }
+	// Method for creating user
+	public function create()
+	{
+		// load model
+		$this->load->model("User");
 
+		// check user input
+		$this->load->library('form_validation');
 
-	// // Method for creating user
-	// public function create()
-	// {
-	// 	// load model
-	// 	$this->load->model("User");
+		// delegate the model the task of validating user input
+		$validation_result = $this->User->validate($this->input->post());
 
-	// 	// check user input
-	// 	$this->load->library('form_validation');
+		if( $validation_result == TRUE)
+		{
+			// delegate the task of creating the user to the model
+			$this->User->create($this->input->post());
 
-	// 	// delegate the model the task of validating user input
-	// 	$validation_result = $this->User->validate($this->input->post());
+			$this->session->set_flashdata("error1", "User Registered Successfully");
+			redirect("/home");
+		}
 
-	// 	if( $validation_result == TRUE)
-	// 	{
-	// 		// delegate the task of creating the user to the model
-	// 		$this->User->create($this->input->post());
-
-	// 		$this->session->set_flashdata("error1", "User Registered Successfully");
-	// 		redirect("/");
-	// 	}
-
-	// 	else
-	// 	{
-	// 		$this->session->set_flashdata("error1", "Something in your form didn't go so well, try again");
-	// 		redirect('/');
-	// 	}
+		else
+		{
+			$this->session->set_flashdata("error1", "Something in your form didn't go so well, try again");
+			redirect('/users/new');
+		}
 
 		
-	// }
+	}
 
-	// public function create_trip()
-	// {
-	// 	// load model
-	// 	$this->load->model("User");
+	public function add_restaurant()
+	{
+		$this->load->model('User');
 
-	// 	// check user input
-	// 	$this->load->library('form_validation');
+		$this->User->add_restaurant($this->input->post());
 
-	// 	// delegate the model the task of validating user input
-	// 	$validation_result = $this->User->validate_trip($this->input->post());
-
-	// 	if( $validation_result == TRUE)
-	// 	{
-	// 		// delegate the task of creating the user to the model
-	// 		$this->User->create_trip($this->input->post());
-
-	// 		// return to the user's home page
-	// 		redirect("/success");
-	// 		// var_dump($this->input->post());
-	// 	}
-
-	// 	else
-	// 	{
-	// 		$this->session->set_flashdata("error", "Something in your form didn't go so well, try again");
-	// 		redirect('/add_trip');
-	// 	}
-
-		
-	// }
-
-
-
-
-
+		redirect("Session/success");
+	}
 
 }

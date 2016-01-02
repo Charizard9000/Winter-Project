@@ -16,7 +16,18 @@
 			<label>Password: </label>
 			<input type="password" name="password">
 		
-			<input type="submit" value="Register">
+			<input type="submit" value="Login">
+		</fieldset>
+	</form>
+	<form action="/sessions/admin" method="post">
+		<fieldset>
+			<legend>Admin Log In</legend>
+
+
+			<label>Password: </label>
+			<input type="password" name="admin_password">
+		
+			<input type="submit" value="Admin Login">
 		</fieldset>
 	</form>
 </body>
