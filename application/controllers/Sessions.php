@@ -51,6 +51,23 @@ class Sessions extends CI_Controller
 		}
 	}
 
+	public function admin()
+	{
+		$admin_pw = "dota";
+		if($admin_pw == ($this->input->post('admin_password')))
+		{
+			$admin_info = array("admin" => TRUE);
+			$this->session->set_userdata($admin_info);
+			redirect("Session/success");
+		}
+		else
+		{
+			redirect('/home');
+		}
+
+	}
+
+
 	public function success()
 	{
 		if($this->session->userdata('admin') == FALSE)
