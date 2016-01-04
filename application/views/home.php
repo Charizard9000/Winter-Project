@@ -68,7 +68,7 @@
 		<div id="content">
 			<h1 id="title"> IssyFoods </h1><div>
 				<div id="header">
-					<button onclick="toggleLinks()">>></button>
+					<button onclick="toggleLinks()">&equiv;</button>
 					<a href="/users/new" class='header_link'>REGISTER</a>
 					<a href="/Session/login" class='header_link'>LOG IN</a>
 					<a href="/Session/destroy" class='header_link'>LOG OUT</a>
