@@ -93,6 +93,7 @@ h2{
 	display: inline-block;
 	font: "serif";
 	padding-left: 10px;
+	font-size: 4em;
 }
 
 h3{
@@ -154,22 +155,25 @@ background: rgb(255,132,138);
 
 .restaurant_name{
 	display: inline-block;
-	width:70%;
+	vertical-align: top;
+	width:60%;
 	height:100px;
 }
 
 .restaurant_phone{
 	display: inline-block;
-	width:30%;
+	width:40%;
 }
 
 .restaurant_address{
+	margin-top: 2%;
 	display: inline-block;
 	width:35%;
 	height:200px;
 }
 
 .restaurant_hours{
+	margin-left: 30%;
 	display: inline-block;
 	width:35%;
 }

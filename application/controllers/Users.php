@@ -42,7 +42,7 @@ class Users extends CI_Controller
 	public function add_restaurant()
 	{
 		$this->load->model('Restaurant');
-		$this->User->add_restaurant($this->input->post());
+		$this->Restaurant->add_restaurant($this->input->post());
 		redirect("Session/success");
 	}
 }

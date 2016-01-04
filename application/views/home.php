@@ -47,10 +47,16 @@
 			{
    				$("."+classId).toggle(200);
 			}
+			function toggleLinks(){
+  				$(".header_link").toggle(200);
+	    	}
+	    	function initialHide(){
+	    		$('.header_link').hide();
+	    	}
 		</script>
 	</head>
 
-	<body onload="startTime()">
+	<body onload="startTime(); initialHide()">
 
 		<?php
 		date_default_timezone_get('America/Los_Angeles');
@@ -62,9 +68,11 @@
 		<div id="content">
 			<h1 id="title"> IssyFoods </h1><div>
 				<div id="header">
-					<a href="/users/new">REGISTER</a>
-					<a href="/Session/login">LOG IN</a>
-					<button onclick="toggleD('restaurant')">Delivery-Only</button>
+					<button onclick="toggleLinks()">Options</button>
+					<a href="/users/new" class='header_link'>REGISTER</a>
+					<a href="/Session/login" class='header_link'>LOG IN</a>
+					<a href="/Session/destroy" class='header_link'>LOG OUT</a>
+					<button onclick="toggleD('restaurant')" class='header_link'>Delivery-Only</button>
 					<div id="clock"></div>
 				</div>
 			</div>
@@ -92,9 +100,12 @@
 						echo "<div class='restaurant_d'>";
 						echo "<div class='restaurant_picture'><img src='assets/images/" . $query_result[$i]['Restaurant_id'] . ".jpg' alt=''></div>";
 						echo "<div class='restaurant_info'><div class='restaurant_name'><h2>" . $query_result[$i]['name'] . "</h2></div>";
-						echo "<div class='restaurant_phone'><h3>" . $query_result[$i]['phone'] . "</h3></div>";
-						echo "<div class='restaurant_address'><h3>" . $query_result[$i]['address'] . "</h3></div>";
-						echo "<div class='restaurant_hours'><h3> Hours:" . $query_result[$i]['open'] . " - " . $query_result[$i]['close'] . " </h3></div>";
+						echo "<div class='restaurant_phone'><h3>Phone Number: " . $query_result[$i]['phone'] . "</h3></div>";
+						echo "<div class='restaurant_address'><h3>Address: " . $query_result[$i]['address'] . "</h3></div>";
+						if($query_result[$i]['open'] == '00:00:00' && $query_result[$i]['close'] == "23:59:00")
+							echo "<div class='restaurant_hours'><h3> Hours: Open 24 Hours </h3></div>";
+						else
+							echo "<div class='restaurant_hours'><h3> Hours: " . date("h:m a", strtotime($query_result[$i]['open'])) . " - " . date("h:m a",strtotime($query_result[$i]['close'])) . " </h3></div>";
 						echo "</div></div>";
 					}
 					if($query_result[$i]['deliver'] == '0')
@@ -102,9 +113,12 @@
 						echo "<div class='restaurant'>";
 						echo "<div class='restaurant_picture'><img src='assets/images/" . $query_result[$i]['Restaurant_id'] . ".jpg' alt=''></div>";
 						echo "<div class='restaurant_info'><div class='restaurant_name'><h2>" . $query_result[$i]['name'] . "</h2></div>";
-						echo "<div class='restaurant_phone'><h3>" . $query_result[$i]['phone'] . "</h3></div>";
-						echo "<div class='restaurant_address'><h3>" . $query_result[$i]['address'] . "</h3></div>";
-						echo "<div class='restaurant_hours'><h3> Hours:" . $query_result[$i]['open'] . " - " . $query_result[$i]['close'] . " </h3></div>";
+						echo "<div class='restaurant_phone'><h3>Phone Number: " . $query_result[$i]['phone'] . "</h3></div>";
+						echo "<div class='restaurant_address'><h3>Address: " . $query_result[$i]['address'] . "</h3></div>";
+						if($query_result[$i]['open'] == '00:00:00' && $query_result[$i]['close'] == "23:59:00")
+							echo "<div class='restaurant_hours'><h3> Hours: Open 24 Hours </h3></div>";
+						else
+							echo "<div class='restaurant_hours'><h3> Hours: " . date("h:m a", strtotime($query_result[$i]['open'])) . " - " . date("h:m a",strtotime($query_result[$i]['close'])) . " </h3></div>";
 						echo "</div></div>";
 					}
 				}
