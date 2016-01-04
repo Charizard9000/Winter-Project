@@ -1,10 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Sessions extends CI_Controller {
-	
-
-
-
+class Sessions extends CI_Controller
+{
 	public function login()
 	{
 		$this->load->view("Sessions/new_session");
@@ -22,12 +19,11 @@ class Sessions extends CI_Controller {
 		{
 			$user_info = array(
 					'id' => $user['id'],
-					'name' => $user['first_name'],
-					'username' => $user['last_name'],
+					'first_name' => $user['first_name'],
+					'last_name' => $user['last_name'],
 					'is_logged_in' => TRUE
 				);
 			$this->session->set_userdata($user_info);
-			// var_dump($this->session->userdata('name'));
 			redirect("/home");
 		}
 
@@ -36,7 +32,6 @@ class Sessions extends CI_Controller {
 			$this->session->set_flashdata("error", "Invalid username or password");
 			redirect("Session/login");
 		}
-		// depending on result, show error or login the user
 	}
 
 	public function admin()
@@ -52,9 +47,7 @@ class Sessions extends CI_Controller {
 		{
 			redirect('/home');
 		}
-
 	}
-
 
 	public function success()
 	{
@@ -71,5 +64,4 @@ class Sessions extends CI_Controller {
 		$this->session->sess_destroy();
 		redirect("/");
 	}
-
 }

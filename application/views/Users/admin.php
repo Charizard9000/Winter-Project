@@ -1,6 +1,7 @@
 <html>
 	<head>
 		<title>Admin Page</title>
+		<?php $this->load->library('upload'); ?>
 	</head>
 	<body>
 		<form action="/users/add" method="post">
@@ -50,7 +51,18 @@
 			</fieldset>
 			<input type="submit" value="Add Restaurant">
 		</form>
+		<br>
+		<br>
 
+			<?php echo form_open_multipart('upload/do_upload');?>
+
+			<input type="file" name="userfile" size="20" />
+
+			<br /><br />
+
+			<input type="submit" value="upload" />
+
+		</form>
 
 		<a href="/home">Home</a>
 	</body>

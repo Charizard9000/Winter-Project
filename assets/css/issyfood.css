@@ -1,16 +1,173 @@
-body{
-	background-color: lightblue;
+* {
+	font-family: "Open Sans", sans-serif, serif;
+	margin: 0px auto;
+	padding: 0px;
 }
 
-
 #content{
-	margin: 0 auto;
-	width: 70%;
-	border: 2px solid black;
-	border-radius: 20px;
-	background-color: lightgreen;
+	width: 100%;
+	background-color: rgb(35,35,35);
+}
+
+#header{
+	background: rgba(63,76,107,1) 50%; /* For browsers that do not support gradients */
+  	background: -webkit-linear-gradient(bottom, rgba(63,76,107,1) 50% , rgba(63,76,107,1) 100%); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom, rgba(63,76,107,1) 50% , rgba(63,76,107,1) 100%); /* For Opera 11.1 to 12.0 */
+  	background: -moz-linear-gradient(bottom, rgba(63,76,107,1) 50% , rgba(63,76,107,1) 100%); /* For Firefox 3.6 to 15 */
+  	background: linear-gradient(to bottom, rgba(63,76,107,1) 50% , rgba(63,76,107,1) 100%); /* Standard syntax */
+}
+
+#header a{
+	display: inline-block;
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 1em;
+	font-style: italic;
+	padding: 10px;
+	margin-left: 30px;
+	max-width: 100%;
+    border: 0;
+}
+
+#header button{
+	background: rgba(63,76,107,1) 50%;
+	display: inline-block;
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 1em;
+	font-style: italic;
+	padding: 10px;
+	margin-left: 30px;
+	max-width: 100%;
+    border: 0;
+}
+
+#clock{
+	display: inline-block;
+	font-size: 2em;
+	color: white;
+	float: right;
+	margin-right: 30px;
 }
 
 #title{
+	background-color: rgb(35,35,35);
 	text-align: center;
+	color: white;
+	font-family: "roboto";
+	font-size: 10em;
+	padding-bottom: 15px;
+}
+
+.restaurant, .restaurant_d{
+	width: 100%;
+	height: 400px;
+	margin: 10px 0px;
+}
+
+.restaurant img, .restaurant_d img{
+	display: inline-block;
+	margin-right: 5px;
+}
+
+.restaurant{
+	border: 5px solid black;
+	background: rgb(255,132,138);
+}
+.restaurant_d{
+	border: 5px solid white;
+	background-color: rgb(7,182,155);
+}
+
+h2,h3{
+	color: #ffffff;
+	padding: 5px;
+	vertical-align: top;
+	margin-right: 50px;
+	font-size: 2em;
+
+}
+h2{
+	display: inline-block;
+	font: "serif";
+	padding-left: 10px;
+}
+
+h3{
+	display: inline-block;
+	font-family: "Oswald";
+	float: right;
+
+}
+
+.welcome_message{
+	background-color: none;
+	display: block;
+	color: #ffffff;
+	font-size: 2em;
+}
+
+.welcome_message p{
+	padding: 5px;
+	margin-top: 15px;
+	font-size: 20px;
+	text-align: center;
+
+}
+#deliver_color, #nondeliver_color{
+	display: block;
+	margin: 10px 5px 30px;
+	color: white;
+	height: 30px;
+	width: 280px;
+	text-align: center;
+	padding-top: 5px;
+}
+
+#deliver_color{
+background-color: rgb(7,182,155);
+}
+
+#nondeliver_color{
+background: rgb(255,132,138);
+}
+
+.restaurant_picture{
+	display:inline-block;
+	width: 30%;
+	height: 400px;
+}
+
+/*.restaurant_picture img{
+	margin-left:20%;
+	margin-top: 20%;
+}*/
+
+.restaurant_info{
+	vertical-align: top;
+	display: inline-block;
+	width:70%;
+	height:400px;
+}
+
+.restaurant_name{
+	display: inline-block;
+	width:70%;
+	height:100px;
+}
+
+.restaurant_phone{
+	display: inline-block;
+	width:30%;
+}
+
+.restaurant_address{
+	display: inline-block;
+	width:35%;
+	height:200px;
+}
+
+.restaurant_hours{
+	display: inline-block;
+	width:35%;
 }

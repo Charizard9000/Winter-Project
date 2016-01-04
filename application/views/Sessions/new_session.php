@@ -1,5 +1,3 @@
-
-
 <html>
 <head>
 	<title></title>
@@ -19,10 +17,10 @@
 			<input type="submit" value="Login">
 		</fieldset>
 	</form>
+
 	<form action="/sessions/admin" method="post">
 		<fieldset>
 			<legend>Admin Log In</legend>
-
 
 			<label>Password: </label>
 			<input type="password" name="admin_password">

@@ -48,22 +48,13 @@ $route['users/create'] = "Users/create";
 
 $route['users/add'] = "Users/add_restaurant";
 
-
+$route['upload/do_upload'] = "upload/do_upload";
 
 $route['Session/login'] = "Sessions/login";
 
 $route['Session/admin'] = "Sessions/admin";
 
 $route['Session/success'] = "Sessions/success";
-
-
-
-
-
-
-
-
-
 
 $route['404_override'] = '';
 
