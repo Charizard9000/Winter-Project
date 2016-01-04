@@ -62,6 +62,6 @@ class Sessions extends CI_Controller
 	public function destroy()
 	{
 		$this->session->sess_destroy();
-		redirect("/");
+		redirect("home");
 	}
 }

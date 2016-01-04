@@ -56,6 +56,8 @@ $route['Session/admin'] = "Sessions/admin";
 
 $route['Session/success'] = "Sessions/success";
 
+$route['Session/destroy'] = "Session/destroy";
+
 $route['404_override'] = '';
 
 
