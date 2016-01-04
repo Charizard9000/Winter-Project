@@ -82,6 +82,7 @@
 }
 
 h2,h3{
+	display: inline-block;
 	color: #ffffff;
 	padding: 5px;
 	vertical-align: top;
@@ -90,27 +91,24 @@ h2,h3{
 
 }
 h2{
-	display: inline-block;
-	font: "serif";
-	padding-left: 10px;
-	font-size: 4em;
+	font-family: "Roboto";
+	font-size: 4.5em;
+	margin-top: 5%;
 }
 
 h3{
-	display: inline-block;
-	font-family: "Oswald";
+	font-family: "open sans";
 	float: right;
 
 }
 
 .welcome_message{
-	background-color: none;
 	display: block;
 	color: #ffffff;
-	font-size: 2em;
 }
 
 .welcome_message p{
+	font-size: 2em;
 	padding: 5px;
 	margin-top: 15px;
 	font-size: 20px;
@@ -141,11 +139,6 @@ background: rgb(255,132,138);
 	height: 400px;
 }
 
-/*.restaurant_picture img{
-	margin-left:20%;
-	margin-top: 20%;
-}*/
-
 .restaurant_info{
 	vertical-align: top;
 	display: inline-block;
@@ -161,19 +154,23 @@ background: rgb(255,132,138);
 }
 
 .restaurant_phone{
+	margin-left: -0.5%;
 	display: inline-block;
-	width:40%;
+	margin-top: 3.5%;
+	width:32%;
 }
 
 .restaurant_address{
-	margin-top: 2%;
+	margin-left: 0.5%;
+	margin-top: 10%;
 	display: inline-block;
-	width:35%;
+	width:50%;
 	height:200px;
 }
 
 .restaurant_hours{
-	margin-left: 30%;
+	margin-left: 4.5%;
+	margin-bottom: 13%;
 	display: inline-block;
-	width:35%;
+	width:45%;
 }
