@@ -89,7 +89,7 @@
 				<div id="nondeliver_color"> <h4>DOES NOT DELIVER</h4></div>
 				<div id="deliver_color"> <h4> DELIVERS</h4></div>
 
-			<?php
+			<?php // var_dump($query_result);
 			for($i=0;$i<count($query_result);$i++)
 			{
 				
@@ -105,7 +105,7 @@
 						if($query_result[$i]['open'] == '00:00:00' && $query_result[$i]['close'] == "23:59:00")
 							echo "<div class='restaurant_hours'><h3> Hours: Open 24 Hours </h3></div>";
 						else
-							echo "<div class='restaurant_hours'><h3> Hours: " . date("h:m a", strtotime($query_result[$i]['open'])) . " - " . date("h:m a",strtotime($query_result[$i]['close'])) . " </h3></div>";
+							echo "<div class='restaurant_hours'><h3> Hours: " . date("h:i a", strtotime($query_result[$i]['open'])) . " - " . date("h:i a",strtotime($query_result[$i]['close'])) . " </h3></div>";
 						echo "</div></div>";
 					}
 					if($query_result[$i]['deliver'] == '0')
@@ -118,7 +118,7 @@
 						if($query_result[$i]['open'] == '00:00:00' && $query_result[$i]['close'] == "23:59:00")
 							echo "<div class='restaurant_hours'><h3> Hours: Open 24 Hours </h3></div>";
 						else
-							echo "<div class='restaurant_hours'><h3> Hours: " . date("h:m a", strtotime($query_result[$i]['open'])) . " - " . date("h:m a",strtotime($query_result[$i]['close'])) . " </h3></div>";
+							echo "<div class='restaurant_hours'><h3> Hours: " . date("h:i a", strtotime($query_result[$i]['open'])) . " - " . date("h:i a",strtotime($query_result[$i]['close'])) . " </h3></div>";
 						echo "</div></div>";
 					}
 				}
