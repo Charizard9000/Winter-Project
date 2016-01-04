@@ -25,5 +25,6 @@
 			<input type="submit" value="Register">
 		</fieldset>
 	</form>
+	<?= $this->session->flashdata('error1'); ?>
 </body>
 </html>

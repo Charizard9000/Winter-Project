@@ -34,7 +34,7 @@ class Users extends CI_Controller
 
 		else
 		{
-			$this->session->set_flashdata("error1", "Something in your form didn't go so well, try again");
+			$this->session->set_flashdata("error1", validation_errors());
 			redirect('/users/new');
 		}
 	}
