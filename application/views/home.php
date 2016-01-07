@@ -10,6 +10,9 @@
     	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=oswald">
 
 		<script>
+			$(document).ready(function(){
+				startTime();
+			});
 			function startTime() {
 		    	var today = new Date();
 		    	var check = today.getHours();
@@ -48,15 +51,17 @@
    				$("."+classId).toggle(200);
 			}
 			function toggleLinks(){
-  				$(".header_link").toggle(200);
-	    	}
-	    	function initialHide(){
-	    		$('.header_link').hide();
+				if($(".header_link").css("display") == "none"){
+					console.log("hidden");
+					$(".header_link").fadeIn(300);
+				} else {
+					$(".header_link").fadeOut(300);
+				}
 	    	}
 		</script>
 	</head>
 
-	<body onload="startTime(); initialHide()">
+	<body>
 
 		<?php
 		date_default_timezone_get('America/Los_Angeles');
@@ -69,10 +74,12 @@
 			<h1 id="title"> IssyFoods </h1><div>
 				<div id="header">
 					<button onclick="toggleLinks()">&equiv;</button>
-					<a href="/users/new" class='header_link'>REGISTER</a>
-					<a href="/Session/login" class='header_link'>LOG IN</a>
-					<a href="/Session/destroy" class='header_link'>LOG OUT</a>
-					<button onclick="toggleD('restaurant')" class='header_link'>SHOW DELIVERY ONLY</button>
+					<div style="text-align: center; display: inline; margin-left: 28%">
+						<a href="/users/new" class='header_link hide'>REGISTER</a>
+						<a href="/Session/login" class='header_link hide'>LOG IN</a>
+						<a href="/Session/destroy" class='header_link hide'>LOG OUT</a>
+						<button onclick="toggleD('restaurant')" class='header_link hide'>SHOW DELIVERY ONLY</button>
+					</div>
 					<div id="clock"></div>
 				</div>
 			</div>
