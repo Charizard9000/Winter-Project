@@ -12,7 +12,7 @@ form{
 	width:100%;
 	text-align:center;
 	background-color: rgb(35,35,35);
-	margin: 15px auto;
+	margin: 0px auto;
 	font-family: "Open Sans";
 	color: #ffffff;
 	height:100%;
