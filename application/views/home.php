@@ -11,7 +11,10 @@
 
 		<script>
 			$(document).ready(function(){
-				startTime();
+				$('#rotate').click(function(){
+    			$(this).toggleClass('rotated');
+				})
+			startTime();
 			});
 			function startTime() {
 		    	var today = new Date();
@@ -49,6 +52,7 @@
 			function toggleD(classId) 
 			{
    				$("."+classId).toggle(200);
+
 			}
 			function toggleLinks(){
 				if($(".header_link").css("display") == "none"){
@@ -73,7 +77,7 @@
 		<div id="content">
 			<h1 id="title"> IssyFoods </h1><div>
 				<div id="header">
-					<button onclick="toggleLinks()">&equiv;</button>
+					<button onclick="toggleLinks()" id="rotate">&equiv;</button>
 					<div style="text-align: center; display: inline; margin-left: 28%">
 						<a href="/users/new" class='header_link hide'>REGISTER</a>
 						<a href="/Session/login" class='header_link hide'>LOG IN</a>

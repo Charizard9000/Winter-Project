@@ -3,6 +3,7 @@
 		<title>Admin Page</title>
 		<?php $this->load->library('upload'); ?>
 	</head>
+	
 	<body>
 		<form action="/users/add" method="post">
 			<label>Restaurant Name</label>
