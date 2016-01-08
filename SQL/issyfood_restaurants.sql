@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.7.9, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 5.6.24, for osx10.8 (x86_64)
 --
 -- Host: 127.0.0.1    Database: issyfood
 -- ------------------------------------------------------
--- Server version	5.5.41-log
+-- Server version	5.5.42
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -29,7 +29,7 @@ CREATE TABLE `restaurants` (
   `phone` varchar(45) DEFAULT NULL,
   `deliver` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,7 +38,7 @@ CREATE TABLE `restaurants` (
 
 LOCK TABLES `restaurants` WRITE;
 /*!40000 ALTER TABLE `restaurants` DISABLE KEYS */;
-INSERT INTO `restaurants` VALUES (1,'McDonalds','1305 NW Gilman Blvd','(425) 392-5674',0),(2,'Triple X Rootbeer','98 NE Gilman Blvd, Issaquah, WA 98027','(425) 392-1266',0),(3,'Jack In The Box','740 NW Gilman Blvd, Issaquah, WA 98027','(425) 837-1618',0),(4,'Costco','1801 10th Ave Nw Issaquah, WA 98027','(425) 391-1731',0),(5,'Flying Pie Pizzaria','30 Front St. S, Issaquah, Wa, 98027','(425) 391-2407',0),(6,'Round Table Pizza','730 NW Gilman Blvd','(425) 391-7117',1),(7,'Dominos Pizza','108 Front St N, Issaquah, WA 98027','(425) 392-1003',1),(8,'Dickeys Barbecue','710 NW Gilman Blvd, Suite D105','(425) 392-2336',0),(9,'Frankies Pizza','1420 NW Gilman Blvd, Issaquah, WA 98027','(425) 427-6737',1);
+INSERT INTO `restaurants` VALUES (1,'McDonalds','1305 NW Gilman Blvd, Issaquah, WA 98027','(425) 392-5674',0),(2,'Triple X Rootbeer','98 NE Gilman Blvd, Issaquah, WA 98027','(425) 392-1266',0),(3,'Jack In The Box','740 NW Gilman Blvd, Issaquah, WA 98027','(425) 837-1618',0),(4,'Costco','1801 10th Ave Nw Issaquah, WA 98027','(425) 391-1731',0),(5,'Flying Pie Pizzaria','30 Front St. S, Issaquah, Wa, 98027','(425) 391-2407',0),(6,'Round Table Pizza','730 NW Gilman Blvd, Issaquah, WA 98027','(425) 391-7117',1),(7,'Dominos Pizza','108 Front St N, Issaquah, WA 98027','(425) 392-1003',1),(8,'Dickeys Barbecue','710 NW Gilman Blvd, Suite D105, Issaquah, WA 98027','(425) 392-2336',0),(9,'Frankies Pizza','1420 NW Gilman Blvd, Issaquah, WA 98027','(425) 427-6737',1),(10,'Garlic Crush','1620 NW Gilman Blvd, Issaquah, WA 98027','(425) 295-7490',0);
 /*!40000 ALTER TABLE `restaurants` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-01-04  8:47:53
+-- Dump completed on 2016-01-08 14:36:16
