@@ -3,11 +3,11 @@
 	<head>
 		<meta charset="utf-8">
 		<title>IssyFood</title>
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+    	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans">
+	    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto">
+    	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Oswald">
 		<link rel="stylesheet" type="text/css" href="<?= base_url('assets/css/issyfood.css') ?>">
-    	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans">
-	    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=roboto">
-    	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=oswald">
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
 
 		<script>
 			$(document).ready(function(){
@@ -31,11 +31,11 @@
 		    	var m = today.getMinutes();
 		    	var s = today.getSeconds();
 		    	var a = "AM";
-		    	if(check > 12)
+		    	if(check >= 12)
 		    	{
 		    		a = "PM";
 		    	}
-		    	if (check <= 12)
+		    	if (check < 12)
 		    	{
 		    		a = "AM";
 		    	}

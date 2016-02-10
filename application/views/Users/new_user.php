@@ -2,11 +2,11 @@
 <head>
 	<title>Register</title>
 </head>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="<?= base_url('assets/css/issyfood.css') ?>">
-<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans">
-<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=roboto">
-<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=oswald">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans">
+<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
 <style>
 form{
 	width:100%;
@@ -40,14 +40,15 @@ label{
 input{
 	height: 3%;
 	text-align: center;
-	margin: 0px; auto;
-	width: 13%;
+	margin: 0px auto;
+	width: 14%;
 	font-size: 1em;
 	font-weight: bold;
 	font-color: green;
 }
 #regi_button{
 	text-align: center;
+	vertical-align: top;
 	border: 2pt solid white;
 	font-family: "oswald";
 	padding: 2%;
@@ -58,12 +59,12 @@ input{
 	background-color: rgba(63,76,107,1);
 	width:10%;
 	float:right;
-	margin-top: 4%;
+	margin-top: 3%;
 	margin-right: 8%;
 }
 #regi_button:hover{
-	text-align:center;
-	display:block;
+	text-align: center;
+	display: block;
 	width:10%;
 	background-color: rgba(63,76,31,1);
 }
